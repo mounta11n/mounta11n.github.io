@@ -1,7 +1,7 @@
 baseURL = 'https://mounta11n.github.io'
 languageCode = 'en-us'
 title = 'mount ai in'
-theme = 'minimalist'
+theme = 'tale'
 #
 #params:
 #  enableBlogPost = true

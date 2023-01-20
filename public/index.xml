@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mount ai in</title>
+    <link>https://mounta11n.github.io/</link>
+    <description>Recent content on mount ai in</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 19 Jan 2023 22:40:08 +0100</lastBuildDate><atom:link href="https://mounta11n.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sample</title>
+      <link>https://mounta11n.github.io/posts/sample/</link>
+      <pubDate>Thu, 19 Jan 2023 22:40:08 +0100</pubDate>
+      
+      <guid>https://mounta11n.github.io/posts/sample/</guid>
+      <description>no tracking what does that mean? I had to remind myself why I’m writing this blog at all: First and foremost, I write for myself. For the pleasure of writing, to keep notes and to structure thoughts. If any of this turns out to be useful for others, great, glad I could help. No need to spy on my visitors.
+Benefits data privacy performance peace of mind
+no comments really? Let’s face it: Static site generators are simply not made for this.</description>
+    </item>
+    
+    <item>
+      <title>Gehversuch</title>
+      <link>https://mounta11n.github.io/posts/gehversuch/</link>
+      <pubDate>Thu, 19 Jan 2023 17:22:04 +0100</pubDate>
+      
+      <guid>https://mounta11n.github.io/posts/gehversuch/</guid>
+      <description>ein zwei
+drei</description>
+    </item>
+    
+  </channel>
+</rss>
