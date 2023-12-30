@@ -1,0 +1,317 @@
+
+:root {
+  --phi: 1.62;
+
+  --primary-color:   #222831;
+  --primary-color-1: hsl(0,    0%,  0%);
+  --primary-color-2: hsl(216, 18%, 15%);
+  --primary-color-3: #393e46;
+  --primary-color-3: hsl(216, 10%, 25%);
+  --primary-color-4: hsl(216, 18%, 35%);
+  --primary-color-5: hsl(216, 10%, 45%);
+
+  --secondary-color:   #EEEEEE;
+  --secondary-color-1: hsl(0, 0%,100%);
+  --secondary-color-2: hsl(0, 0%, 93%);
+  --secondary-color-3: hsl(0, 0%, 80%);
+  --secondary-color-4: hsl(0, 0%, 70%);
+  --secondary-color-5: hsl(0, 0%, 60%);
+
+  --nuance-color:   #00adb5;
+  --nuance-color-1: hsl(183, 100%, 15%);
+  --nuance-color-2: hsl(183, 100%, 25%);
+  --nuance-color-3: hsl(183, 100%, 35%);
+  --nuance-color-4: hsl(183, 100%, 45%);
+  --nuance-color-5: hsl(183, 100%, 55%);
+
+  --selection-color: hsl(183, 100%, 75%);
+
+  --frame-color-bg: var(--primary-color-2);
+  --frame-color-fg: var(--secondary-color-2);
+
+  --banner-color-bg: var(--primary-color-3);
+  --banner-color-bg: var(--secondary-color-3);
+
+  --section-base-bg: var(--secondary-color-2);
+  --section-base-fg: var(--nuance-color-1);
+  --section-further-bg: var(--secondary-color-3);
+  --section-further-fg: var(--primary-color-2);
+
+  --border-color: var(--primary-color-3);
+
+  --compare-sub-color: var(--primary-color-4);
+  --compare-top-color: var(--nuance-color-1);
+  --compare-sub-button-bg: var(--primary-color-4);
+  --compare-sub-button-fg: var(--secondary-color-2);
+  --compare-top-button-bg: var(--nuance-color-1);
+  --compare-top-button-fg: var(--secondary-color-2);
+
+  --topbar-height: 50px;
+  --phi-distance: 200px;
+  --phi-distance-a: calc(var(--phi-distance)   / var(--phi));
+  --phi-distance-b: calc(var(--phi-distance-a) / var(--phi));
+  --phi-distance-c: calc(var(--phi-distance-b) / var(--phi));
+  --phi-distance-d: calc(var(--phi-distance-c) / var(--phi));
+}
+
+@font-face{
+    font-family: 'BBC';
+    src: url('fonts/bbc.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'BBC-S';
+    src: url('fonts/bbc-s.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'BBC-M';
+    src: url('fonts/bbc-m.ttf') format('truetype');
+    font-weight: normal ;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'BBC-L';
+    src: url('fonts/bbc-l.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'BBC-XL';
+    src: url('fonts/bbc-xl.ttf') format('truetype');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'BBC-CD';
+    src: url('fonts/bbc-cd.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'BBC-CD-L';
+    src: url('fonts/bbc-cd-l.ttf') format('truetype');
+    font-weight: bold ;
+    font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'BBC-CD';
+}
+
+body {
+  margin: 0;
+  font-family: 'BBC-CD';
+}
+
+/* Container für Sidebar und Inhalt */
+.main-container {
+  display: flex;
+  width: 100%;
+  margin: 0;
+}
+
+.header {
+background-color: var(--primary-color);
+color: var(--secondary-color-2);
+height: var(--phi-distance-c);
+padding: 10px 20px;
+position: sticky;
+top: 0;
+z-index: 1000;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.logo {
+  float: left;
+}
+
+.logo img {
+max-height: var(--phi-distance-c);
+}
+
+.nav {
+  float: right;
+}
+
+.nav-item {
+  display: inline-block;
+  margin-left: 10px;
+  padding-left: 10px;
+  margin-right: 10px;
+  padding-right: 10px;
+}
+
+.nav-item:hover {
+  background-color: var(--primary-color-3);
+}
+
+.nav-item a {
+color: var(--secondary-color-2);
+text-decoration: none;
+line-height: 50px;
+}
+
+.menu-icon {
+  display: none;
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* On-Page-Navigation Styles */
+.sidebar {
+  background-color: var(--secondary-color-3);
+  position: fixed;
+  top: var(--phi-distance-c);
+  height: calc(100vh - var(--phi-distance-c));
+  min-width: var(--phi-distance);
+  max-width: var(--phi-distance);
+  padding-top: var(--phi-distance-b);
+  overflow-y: auto;
+}
+
+.sidebar a {
+  display: block;
+  padding: 5px 10px;
+  margin: 5px 0;
+  text-decoration: none;
+  color: #333;
+}
+
+.sidebar a:hover {
+  background-color: #ddd;
+}
+
+.content {
+  flex-grow: 1;
+  margin-left: var(--phi-distance);
+  width: calc(100% - var(--phi-distance));
+  box-sizing: border-box;
+  padding: 0px;
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+.indent-left {
+  color: var(--nuance-color);
+  width: calc(100% / var(--phi));
+  float: left;
+  padding-left: var(--phi-distance-b)!important;
+}
+
+.indent-left-bg {
+  background-color: var(--secondary-color-1);
+  width: 100%;
+  content: "";
+  display: table;
+  padding-top: var(--phi-distance-c)!important;
+  padding-bottom: var(--phi-distance-c)!important;
+}
+
+.indent-right {
+  color: var(--primary-color-2);
+  width: calc(100% / var(--phi));
+  float: right;
+  padding-right: var(--phi-distance-c)!important;
+}
+
+.indent-right-bg {
+  background-color: var(--secondary-color-2);
+  width: 100%;
+  content: "";
+  display: table;
+  padding-top: var(--phi-distance-c)!important;
+  padding-bottom: var(--phi-distance-c)!important;
+}
+
+.section ::selection{
+  color: -inherit;
+  background: var(--selection-color);
+}
+
+.section p{
+  font-weight: bold;
+  font-size: 1.5rem !important;
+  font-family: 'BBC-CD';
+}
+
+.section h1,
+.section h1:hover{
+  font-weight: bold;
+  font-size: 2.5rem !important;
+  font-family: 'BBC-XL';
+}
+
+.section h5,
+.section h5:hover{
+  font-weight: bold;
+  font-size: 2.0rem !important;
+  font-family: 'BBC-L';
+}
+
+/* Mobile On-Page-Navigation Styles */
+/* Lasche an der Seite */
+.mobile-nav-toggle {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) rotate(90deg);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    clear: both;
+  }
+/*  */
+  .nav-item {
+    display: block;
+    margin: 0;
+  }
+/*  */
+  .menu-icon {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  }
+/*  */
+  .sidebar {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background-color: #f9f9f9;
+    overflow-y: hidden;
+    transition: left 0.3s;
+  }
+/*  */
+  .mobile-nav-toggle {
+    display: block;
+  }
+/*  */
+  .sidebar.open {
+    left: 0;
+  }
+}
