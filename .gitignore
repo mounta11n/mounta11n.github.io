@@ -6,3 +6,4 @@ extract-classes.js
 used-classes-*
 temp-file.*
 workspace-*
+/workspace-*

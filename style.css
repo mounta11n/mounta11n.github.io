@@ -2,13 +2,16 @@
 :root {
   --phi: 1.62;
 
-  --primary-color:   #222831;
-  --primary-color-1: hsl(0,    0%,  0%);
-  --primary-color-2: hsl(216, 18%, 15%);
-  --primary-color-3: #393e46;
-  --primary-color-3: hsl(216, 10%, 25%);
-  --primary-color-4: hsl(216, 18%, 35%);
-  --primary-color-5: hsl(216, 10%, 45%);
+  --primary-color:   #cb4c48;
+  --primary-color-3: #ff4444;
+
+  --primary-color:   hsl(2, 55%, 55%);
+  --primary-color: hsl(356, 76%, 41%);
+  --primary-color-1: hsl(2, 70%,  57%);
+  --primary-color-2: hsl(1, 85%, 60%);
+  --primary-color-3: hsl(0, 100%, 63%);
+  --primary-color-4: hsl(0, 18%, 35%);
+  --primary-color-5: hsl(0, 10%, 45%);
 
   --secondary-color:   #EEEEEE;
   --secondary-color-1: hsl(0, 0%,100%);
@@ -52,6 +55,26 @@
   --phi-distance-b: calc(var(--phi-distance-a) / var(--phi));
   --phi-distance-c: calc(var(--phi-distance-b) / var(--phi));
   --phi-distance-d: calc(var(--phi-distance-c) / var(--phi));
+
+  --phi-vw: 100vw;
+  --phi-vw-a: calc(var(--phi-vw)   / var(--phi));
+  --phi-vw-b: calc(var(--phi-vw-a) / var(--phi));
+  --phi-vw-c: calc(var(--phi-vw-b) / var(--phi));
+  --phi-vw-d: calc(var(--phi-vw-c) / var(--phi));
+  --phi-vw-e: calc(var(--phi-vw-d) / var(--phi));
+  --phi-vw-f: calc(var(--phi-vw-e) / var(--phi));
+  --phi-vw-g: calc(var(--phi-vw-f) / var(--phi));
+  --phi-vw-h: calc(var(--phi-vw-g) / var(--phi));
+
+  --phi-vh: 100vh;
+  --phi-vh-a: calc(var(--phi-vh)   / var(--phi));
+  --phi-vh-b: calc(var(--phi-vh-a) / var(--phi));
+  --phi-vh-c: calc(var(--phi-vh-b) / var(--phi));
+  --phi-vh-d: calc(var(--phi-vh-c) / var(--phi));
+  --phi-vh-e: calc(var(--phi-vh-d) / var(--phi));
+  --phi-vh-f: calc(var(--phi-vh-e) / var(--phi));
+  --phi-vh-g: calc(var(--phi-vh-f) / var(--phi));
+  --phi-vh-h: calc(var(--phi-vh-g) / var(--phi));
 }
 
 @font-face{
@@ -103,14 +126,41 @@
     font-style: normal;
 }
 
+@font-face{
+    font-family: 'Montserrat';
+    src: url('fonts/montserrat-regular-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Montserrat-L';
+    src: url('fonts/montserrat-bold-webfont.woff2') format('woff2');
+    font-weight: bold ;
+    font-style: normal;
+}
+
 html {
   scroll-behavior: smooth;
-  font-family: 'BBC-CD';
+  font-family: 'Montserrat';
 }
 
 body {
   margin: 0;
-  font-family: 'BBC-CD';
+  font-family: 'Montserrat';
+}
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+h1 {
+  font-family: 'Montserrat-L' !important;
+}
+
+h5 {
+  font-family: 'Montserrat-L' !important;
 }
 
 /* Container für Sidebar und Inhalt */
@@ -121,17 +171,22 @@ body {
 }
 
 .first-page {
-  background-color: #f1f1f1;
-  padding: 30px;
+  color: var(--secondary-color);
+  background-color: var(--primary-color-3);
+  padding-top: var(--phi-vh-d);
+  font-family: Montserrat-L;
+  width: 100%;
+  font-size: 20px;
   text-align: center;
-  height: 80vh;
+  height: var(--phi-vh-b);
 }
 
 .header {
 background-color: var(--primary-color);
 color: var(--secondary-color-2);
-height: var(--phi-distance-c);
+height: var(--phi-vh-g);
 padding: 10px 20px;
+font-family: Montserrat-L;
 position: sticky;
 top: 0;
 z-index: 1000;
@@ -201,16 +256,6 @@ line-height: 50px;
   overflow-y: auto;
   font-family: 'BBC-L';
 }
-.sidebar {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: -100%;
-  background-color: #f9f9f9;
-  overflow-y: hidden;
-  transition: left 0.3s;
-}
 
 .sidebar a {
   display: block;
@@ -226,7 +271,7 @@ line-height: 50px;
 
 .content {
   flex-grow: 1;
-  margin-left: var(--phi-distance);
+  /* margin-left: var(--phi-distance); */
   width: calc(100% - var(--phi-distance));
   box-sizing: border-box;
   padding: 0px;
@@ -237,7 +282,7 @@ line-height: 50px;
 }
 
 .indent-left {
-  color: var(--nuance-color);
+  color: #333;
   width: calc(100% / var(--phi));
   float: left;
   padding-left: var(--phi-distance-b)!important;
@@ -256,7 +301,7 @@ line-height: 50px;
   color: var(--primary-color-2);
   width: calc(100% / var(--phi));
   float: right;
-  padding-right: var(--phi-distance-c)!important;
+  padding-right: var(--phi-vw-e)!important;
 }
 
 .indent-right-bg {
@@ -291,6 +336,17 @@ line-height: 50px;
   font-weight: bold;
   font-size: 2.0rem !important;
   font-family: 'BBC-L';
+}
+
+/* ---- particles.js container ---- */
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-color: hsl(356, 76%, 41%);
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 /* Mobile On-Page-Navigation Styles */

@@ -27,7 +27,7 @@
 <!--  -->
   <div class="main-container">
   <!-- Anker-Links -->
-    <div class="sidebar">
+    <!-- <div class="sidebar">
       <a href="solutions.html#websites">Webseiten</a>
       <a href="solutions.html#applications">Anwendungen</a>
       <a href="solutions.html#ai-consulting">KI Beratung</a>
@@ -36,9 +36,16 @@
       <a href="solutions.html#voice-assistants">Sprach KI</a>
       <a href="solutions.html#benchmakring">Benchmarking</a>
       <a href="solutions.html#contact">Kontakt</a>
-    </div>
+    </div> -->
   <!-- Inhaltsabschnitte -->
     <div class="content">
+      <div>
+        <!-- <h1>Neuronale Netzwerke</h1>
+        <h1>menschlich und maschinell</h1> -->
+        <div id="particles-js"></div>
+        <script src="js/particles.js"></script>
+        <script src="js/app.js"></script>
+      </div>
       <div class="indent-left-bg">
         <section id="helloworld" class="section indent-left">
           <h1>Hallo Welt!</h1>
@@ -90,20 +97,24 @@
   </div>
 <!--  -->
   <script>
-    // window.onscroll = function() {myFunction()};
-
-    // var navbar = document.getElementById("navbar");
-    // var sticky = navbar.offsetTop;
-    // var hasStickyBeenApplied = false;
-
-    // function myFunction() {
-    //   if (window.pageYOffset >= sticky) {
-    //     navbar.classList.add("sticky");
-    //     hasStickyBeenApplied = true;
-    //   } else if (!hasStickyBeenApplied) {
-    //     navbar.classList.remove("sticky");
-    //   }
-    // }
+    var count_particles, stats, update;
+    stats = new Stats;
+    stats.setMode(0);
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.left = '0px';
+    stats.domElement.style.top = '0px';
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector('.js-count-particles');
+    update = function() {
+      stats.begin();
+      stats.end();
+      if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+        count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+      }
+      requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+  //
     function toggleMenu() {
       var nav = document.querySelector('.nav');
       if (nav.style.display === 'block') {
