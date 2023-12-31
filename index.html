@@ -15,7 +15,7 @@
       <img src="assets/logo.svg" alt="Logo">
     </div>
     <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    <nav class="nav">
+    <nav class="navbar">
       <div class="nav-hint">SEITE BEFINDET SICH IM AUFBAU</a></div>
       <div class="nav-item"><a href="index.html">Startseite</a></div>
       <div class="nav-item"><a href="solutions.html">Lösungen</a></div>
@@ -90,6 +90,20 @@
   </div>
 <!--  -->
   <script>
+    // window.onscroll = function() {myFunction()};
+
+    // var navbar = document.getElementById("navbar");
+    // var sticky = navbar.offsetTop;
+    // var hasStickyBeenApplied = false;
+
+    // function myFunction() {
+    //   if (window.pageYOffset >= sticky) {
+    //     navbar.classList.add("sticky");
+    //     hasStickyBeenApplied = true;
+    //   } else if (!hasStickyBeenApplied) {
+    //     navbar.classList.remove("sticky");
+    //   }
+    // }
     function toggleMenu() {
       var nav = document.querySelector('.nav');
       if (nav.style.display === 'block') {
