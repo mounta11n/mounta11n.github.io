@@ -183,17 +183,17 @@ h5 {
 }
 
 .header {
-background-color: var(--primary-color);
-color: var(--secondary-color-2);
-height: var(--phi-vh-g);
-padding: 10px 20px;
-font-family: Montserrat-L;
-position: sticky;
-top: 0;
-z-index: 1000;
-display: flex;
-align-items: center;
-justify-content: space-between;
+  background-color: #333;
+  color: var(--secondary-color-2);
+  height: var(--phi-vh-g);
+  padding: 10px 20px;
+  font-family: Montserrat-L;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
@@ -201,7 +201,7 @@ justify-content: space-between;
 }
 
 .logo img {
-max-height: var(--phi-distance-c);
+  max-height: var(--phi-distance-c);
 }
 
 .navbar {
@@ -221,9 +221,9 @@ max-height: var(--phi-distance-c);
 }
 
 .nav-item a {
-color: var(--secondary-color-2);
-text-decoration: none;
-line-height: 50px;
+  color: var(--secondary-color-2);
+  text-decoration: none;
+  line-height: 50px;
 }
 
 .nav-hint {
