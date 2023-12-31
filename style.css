@@ -163,6 +163,18 @@ text-decoration: none;
 line-height: 50px;
 }
 
+.nav-hint {
+  display: inline-block;
+  margin-left: 10px;
+  padding-left: 10px;
+  margin-right: 50px;
+  padding-right: 10px;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+  background-color: yellow;
+}
+
 .menu-icon {
   display: none;
   float: right;
@@ -180,6 +192,7 @@ line-height: 50px;
   max-width: var(--phi-distance);
   padding-top: var(--phi-distance-b);
   overflow-y: auto;
+  font-family: 'BBC-L';
 }
 
 .sidebar a {
