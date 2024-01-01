@@ -149,11 +149,56 @@ html {
 body {
   margin: 0;
   font-family: 'Montserrat';
+  font-size: 100%;
+  max-width: 100vw;
 }
 
 canvas{
   display:block;
   vertical-align:bottom;
+}
+
+.serif-font {
+  font-family: 'BBC', Georgia, Garamond, 'Times New Roman', Times, serif;
+}
+
+.condensed-font {
+  font-family: 'BBC-CD', Tahoma, sans-serif;
+}
+
+.default-font {
+  font-family: 'Montserrat', Tahoma, sans-serif;
+}
+
+/* ---- particles.js container ---- */
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-color: hsl(356, 76%, 41%);
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: red;
+}
+
+a:visited {
+  color: hsl(356, 76%, 41%);
+}
+
+a:hover {
+  color: hotpink;
+}
+
+a:active {
+  color: blue;
 }
 
 h1 {
@@ -169,6 +214,12 @@ h5 {
   display: flex;
   width: 100%;
   margin: 0;
+}
+
+.container-relative {
+  position: relative;
+  overflow: auto;
+  /* TODO nicht gnaz richtig */
 }
 
 .first-page {
@@ -349,15 +400,23 @@ h5 {
   font-family: 'BBC-L';
 }
 
-/* ---- particles.js container ---- */
-#particles-js{
-  width: 100%;
-  height: 100%;
-  background-color: hsl(356, 76%, 41%);
-  background-image: url('');
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.1s;
+  width: 20%;
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+}
+
+.card img {
+  border-radius: 5px 5px 0 0;
+}
+
+.card-container {
+  padding: 2px 16px;
 }
 
 /* Mobile On-Page-Navigation Styles */
