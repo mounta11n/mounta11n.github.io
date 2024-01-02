@@ -141,6 +141,10 @@
     font-style: normal;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
   font-family: 'Montserrat';
@@ -374,11 +378,6 @@ h5 {
   color: -inherit;
   background: var(--selection-color-1);
 }
-
-/* .section ::selection{
-  color: -inherit;
-  background: var(--selection-color-1);
-} */
 
 .section p{
   font-weight: bold;
