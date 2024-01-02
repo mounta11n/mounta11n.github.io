@@ -379,11 +379,6 @@ h5 {
   background: var(--selection-color-1);
 }
 
-/* .section ::selection{
-  color: -inherit;
-  background: var(--selection-color-1);
-} */
-
 .section p{
   font-weight: bold;
   font-size: 1.5rem !important;

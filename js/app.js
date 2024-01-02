@@ -90,13 +90,13 @@ particlesJS('particles-js',
         },
         "onclick": {
           "enable": true,
-          "mode": "bubble",
+          "mode": "repulse",
         },
         "resize": true
       },
       "modes": {
         "grab": {
-          "distance": 400,
+          "distance": 40,
           "line_linked": {
             "opacity": 1
           }
@@ -109,7 +109,7 @@ particlesJS('particles-js',
           "speed": 30
         },
         "repulse": {
-          "distance": 100
+          "distance": 180
         },
         "push": {
           "particles_nb": 4
