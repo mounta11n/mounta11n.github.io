@@ -22,6 +22,7 @@ nav {
   top: 0;
   width: 100%;
   box-shadow: 0 0 5px #333, 0 -10px 15px #333, 0px -15px 25px #333;
+  z-index: 3;
 }
 .nav a {
   flex: 1; /* Jeder Link nimmt den gleichen Anteil des Raumes ein */
@@ -57,7 +58,8 @@ nav {
 }
 
 /* ---- particles.js container ---- */
-#particles-js{
+#particles-js {
+  position: relative; /* Ermöglicht die absolute Positionierung von Kind-Elementen */
   width: 100%;
   height: 50vh;
   background-color: #b81924;
@@ -65,6 +67,29 @@ nav {
   background-size:contain;
   background-position: 50% 100%;
   background-repeat: no-repeat;
+}
+
+.title-over-particles-h1 {
+  position: absolute;
+  top: 50%; /* Zentriert die Überschrift vertikal */
+  left: 50%; /* Zentriert die Überschrift horizontal */
+  transform: translate(-50%, -50%); /* Verschiebt die Überschrift zurück, um sie genau zu zentrieren */
+  font-size: 8vw; /* Skaliert die Schriftgröße basierend auf der Breite des Viewports */
+  color: #fff; /* oder eine andere Farbe, je nach Hintergrund */
+  text-align: center;
+  text-shadow: 0 0 1px #fff, 0 0 5px #f44, 0 0 13px #cb4c48, 0px -3px 15px #666;
+  z-index: 2; /* Stellt sicher, dass die Überschrift über den Partikeln liegt */
+}
+
+.title-over-particles-h3 {
+  position: absolute;
+  top: 62%; /* Zentriert die Überschrift vertikal */
+  left: 50%; /* Zentriert die Überschrift horizontal */
+  transform: translate(-50%, -50%); /* Verschiebt die Überschrift zurück, um sie genau zu zentrieren */
+  font-size: 5vw; /* Skaliert die Schriftgröße basierend auf der Breite des Viewports */
+  color: #fff; /* oder eine andere Farbe, je nach Hintergrund */
+  text-align: center;
+  z-index: 2; /* Stellt sicher, dass die Überschrift über den Partikeln liegt */
 }
 
 h1 {
