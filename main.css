@@ -109,20 +109,28 @@ p {
 /* Text And Images Block */
 section{
   padding: var(--phi-vh-f) var(--phi-vw-f)!important;
+/* debug */
+/* border: 2px solid yellow; */
 }
 
 .section-content {
   display: flex; /* Aktiviert Flexbox für diesen Container */
   max-width: 768px; /* Setzt die maximale Breite für den Container */
   margin: 0 auto; /* Zentriert den Container */
+/* debug */
+/* border: 2px solid blue; */
 }
 
 .section-text {
-  flex: 2; /* Der Text nimmt zwei Drittel der Breite ein */
+  flex: 8; /* Der Text nimmt zwei Drittel der Breite ein */
+/* debug */
+/* border: 2px solid red; */
 }
 
 .section-spacer {
-  flex: 1; /* Der unsichtbare Platzhalter nimmt ein Drittel der Breite ein */
+  flex: 3; /* Der unsichtbare Platzhalter nimmt ein Drittel der Breite ein */
+/* debug */
+/* border: 2px solid greenyellow; */
 }
 
 .section p{
