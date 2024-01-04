@@ -49,7 +49,8 @@
   --compare-top-button-bg: var(--nuance-color-1);
   --compare-top-button-fg: var(--secondary-color-2);
 
-  --topbar-height: 50px;
+  --topbar-height:    clamp(50px, 10vh, 100px);
+  --animation-height: calc(100vh - var(--topbar-height));
   --phi-distance: 200px;
   --phi-distance-a: calc(var(--phi-distance)   / var(--phi));
   --phi-distance-b: calc(var(--phi-distance-a) / var(--phi));

@@ -1,0 +1,95 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.no-select {
+  -webkit-user-select: none;  /* Safari */
+  -moz-user-select: none;     /* Firefox */
+  -ms-user-select: none;      /* Internet Explorer/Edge */
+  user-select: none;          /* Non-prefixed version, currently supported by Chrome, Opera and Edge */
+}
+
+.select-on {
+  -webkit-user-select: auto;  /* Safari */
+  -moz-user-select: auto;     /* Firefox */
+  -ms-user-select: auto;      /* Internet Explorer/Edge */
+  user-select: auto;          /* Non-prefixed version, currently supported by Chrome, Opera and Edge */
+}
+
+/* ---- particles.js container ---- */
+/* position: relative Ermöglicht die absolute Positionierung von Kind-Elementen */
+#particles-js {
+  position: relative;
+
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background-color: #b81924;
+  /* background-image: url('assets/Logo-Inspiration/ai-platform-svgrepo-com(6).svg'); */
+  background-size:contain;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+h2, h4 {
+  color: #111;
+  margin: 10px 0;
+}
+
+.button-tmp {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button-tmp:hover, .button-tmp:active {
+  background-color: #333;
+  color: #fff;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.icon {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.icon img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.icon:hover img, .icon:active img {
+  transform: scale(1.1);
+}

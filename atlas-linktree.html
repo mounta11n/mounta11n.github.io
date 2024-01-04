@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linktree Page</title>
+<link rel="stylesheet" href="tmp.css">
+</head>
+<body class="no-select">
+<!-- <div id="particles-js"></div> -->
+  <!-- Particles (Animation) -->
+  <div id="particles-js">
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+  </div>
+<div class="content">
+  <img src="assets/Yazan-und-Birte.jpeg" alt="Profilbild" class="profile-image no-select">
+  <h2 class="select-on">Dein Name</h2>
+  <h4 class="select-on">Deine Position</h4>
+  <a href="https://deine-webseite.de" class="button-tmp">Webseite</a>
+  <a href="https://über-mich.de" class="button-tmp">Über mich</a>
+  <a href="https://blog.de" class="button-tmp">Blog</a>
+  <div class="social-links no-select">
+    <a href="https://facebook.com" class="icon no-select">
+      <img src="assets/facebook.svg" alt="Facebook">
+    </a>
+    <a href="https://twitter.com" class="icon no-select">
+      <img src="assets/twitter.svg" alt="Twitter">
+    </a>
+    <a href="https://github.com" class="icon no-select">
+      <img src="assets/github.svg" alt="GitHub">
+    </a>
+  </div>
+</div>
+<footer>
+  <a href="/impressum">Impressum</a>
+  <a href="/datenschutz">Datenschutz</a>
+</footer>
+
+<!-- Javascript -->
+  <script>
+    var count_particles, stats, update;
+    stats = new Stats;
+    stats.setMode(0);
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.left = '0px';
+    stats.domElement.style.top = '0px';
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector('.js-count-particles');
+    update = function() {
+      stats.begin();
+      stats.end();
+      if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+        count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+      }
+      requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+  //
+  </script>
+</body>
+</html>

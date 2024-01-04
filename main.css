@@ -12,6 +12,20 @@ body, html {
   font-family: Arial, sans-serif;
 }
 
+.no-select {
+  -webkit-user-select: none;  /* Safari */
+  -moz-user-select: none;     /* Firefox */
+  -ms-user-select: none;      /* Internet Explorer/Edge */
+  user-select: none;          /* Non-prefixed version, currently supported by Chrome, Opera and Edge */
+}
+
+.select-on {
+  -webkit-user-select: auto;  /* Safari */
+  -moz-user-select: auto;     /* Firefox */
+  -ms-user-select: auto;      /* Internet Explorer/Edge */
+  user-select: auto;          /* Non-prefixed version, currently supported by Chrome, Opera and Edge */
+}
+
 /* display: flex; Aktiviert Flexbox für diesen Container */
 /* justify-content: space-around; Verteilt die Elemente gleichmäßig mit Raum dazwischen */
 /* align-items: center; Zentriert die Elemente vertikal */

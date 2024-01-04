@@ -6,10 +6,29 @@
   padding: 0;
   box-sizing: border-box;
 }
+* ::selection{
+  color: inherit;
+  background: hsl(2, 95%, 65%, 0.2);
+}
+
+.no-select {
+  -webkit-user-select: none;  /* Safari */
+  -moz-user-select: none;     /* Firefox */
+  -ms-user-select: none;      /* Internet Explorer/Edge */
+  user-select: none;          /* Non-prefixed version, currently supported by Chrome, Opera and Edge */
+}
+
+.select-on {
+  -webkit-user-select: auto;  /* Safari */
+  -moz-user-select: auto;     /* Firefox */
+  -ms-user-select: auto;      /* Internet Explorer/Edge */
+  user-select: auto;          /* Non-prefixed version, currently supported by Chrome, Opera and Edge */
+}
 
 body, html {
   height: 100%;
   font-family: Arial, sans-serif;
+  background-color: #333;
 }
 
 /* display: flex; Aktiviert Flexbox für diesen Container */
@@ -18,21 +37,20 @@ body, html {
 nav {
   display: flex;
   justify-content: space-around;
-  align-items: center;
   overflow: hidden;
   background-color: #333;
   position: fixed;
   top: 0;
   width: 100%;
-  height: clamp(50px, 10vh, 100px);
+  height: --var(--topbar-height);
   box-shadow: 0 0 5px #333, 0 -10px 15px #333, 0px -15px 25px #333;
   z-index: 3;
 }
 
 /* flex: 1; bedeutet jeder Link nimmt den gleichen Anteil des Raumes ein */
-.nav a {
+/* float: right; */
+/* .nav a {
   flex: 1;
-  /* float: right; */
   display: block;
   color: #f2f2f2;
   text-align: center;
@@ -41,9 +59,9 @@ nav {
   margin-right: 5px;
   text-decoration: none;
   font-family: 'BBC-L';
-}
+} */
 
-.nav a:hover {
+/* .nav a:hover {
   background-color: hsl(0, 100%, 63%);
   color: #f2f2f2;
   border-radius: 4px;
@@ -53,22 +71,23 @@ nav {
   background-color: hsl(0, 85%, 55%);
   color: #f2f2f2;
   border-radius: 4px;
-}
+} */
 
 .nav-hint {
-  padding: 5px 10px;
+  /* padding: 5px 10px; */
   align-items: center;
   justify-content: space-between;
   color: #ffff00;
   /* background-color: #ffff00; */
   font-weight: 900;
+  align-items: center;
 }
 
-.nav-hint:hover {
+/* .nav-hint:hover {
   background-color: hsl(0, 100%, 63%);
   color: #f2f2f2;
   border-radius: 4px;
-}
+} */
 
 .logo img {
   /* max-height: var(--phi-vh-f); */
@@ -89,7 +108,7 @@ nav {
   margin-top: clamp(50px, 10vh, 100px);
   z-index: 1;
   width: 100%;
-  height: 100vh;
+  height: var(--animation-height);
   background-color: #b81924;
   /* background-image: url('assets/Logo-Inspiration/ai-platform-svgrepo-com(6).svg'); */
   background-size:contain;
@@ -110,6 +129,16 @@ nav {
   text-shadow: 0px 0px 1px #fff, 0px 0px 2px #f44, 3px 1px 5px #b81924;
 }
 
+.title-over-particles-container img {
+  width: 50%;
+  height: 50%;
+  transform: translate(50%, 50%);
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
 /* font-size: min(8vw, 8vh); Skaliert die Schriftgröße basierend auf den kleineren Wert des Viewports */
 .title-over-particles-h1 {
   font-family: monospace;
@@ -119,6 +148,10 @@ nav {
   color: #fff;
   text-align: center;
   cursor: default;
+}
+.title-over-particles-container ::selection{
+  color: #000;
+  background: hsl(2, 95%, 65%, 0.5);
 }
 
 .title-over-particles-h3 {
@@ -239,3 +272,5 @@ footer a {
     grid-template-columns: 1fr;
   }
 }
+
+/* temp */
