@@ -43,7 +43,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  height: clamp(50px, 10vh, 100px);
+  height: var(--topbar-height);
   box-shadow: 0 0 5px #333, 0 -10px 15px #333, 0px -15px 25px #333;
   z-index: 3;
 }
@@ -60,12 +60,14 @@ nav {
   margin-right: 5px;
   text-decoration: none;
   font-family: 'BBC-L';
+  font-size: min(1.8vh, 1.8vw);
+  border-radius: var(--button-border-radius);
 }
 
 .nav a:hover {
   background-color: hsl(0, 100%, 63%);
   color: #f2f2f2;
-  border-radius: 4px;
+  border-radius: var(--button-border-radius);
 }
 
 .nav a:active {
@@ -74,13 +76,11 @@ nav {
   border-radius: 4px;
 }
 
-.nav-hint {
-  padding: 5px 10px;
+/* .nav-hint {
   align-items: center;
   justify-content: space-between;
   color: #ffff00;
-  /* background-color: #ffff00; */
-  font-weight: 900;
+
 }
 
 .nav-hint:hover {
@@ -89,9 +89,13 @@ nav {
   border-radius: 4px;
 }
 
+.logo {
+  max-height: clamp(50px, 10vh, 80px);
+  height: clamp(50px, 10vh, 80px);
+}
+
 .logo img {
-  /* max-height: var(--phi-vh-f); */
-  height: clamp(50px, 10vh, 100px);
+  max-height: clamp(50px, 10vh, 80px);
 }
 
 .menu-icon {
@@ -99,21 +103,21 @@ nav {
   float: right;
   font-size: 28px;
   cursor: pointer;
-}
+} */
 
 /* ---- particles.js container ---- */
 /* position: relative Ermöglicht die absolute Positionierung von Kind-Elementen */
 #particles-js {
   position: relative;
-  margin-top: clamp(50px, 10vh, 100px);
-  z-index: 1;
-  width: 100%;
+  margin-top: var(--topbar-height);
+  width: 100vw;
   height: 50vh;
   background-color: #b81924;
   /* background-image: url('assets/Logo-Inspiration/ai-platform-svgrepo-com(6).svg'); */
   background-size:contain;
   background-position: 50% 100%;
   background-repeat: no-repeat;
+  z-index: 1;
 }
 
 /* ---- titles container ---- */
@@ -125,8 +129,8 @@ nav {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
   text-shadow: 0px 0px 1px #fff, 0px 0px 2px #f44, 3px 1px 5px #b81924;
+  z-index: 2;
 }
 
 /* font-size: min(8vw, 8vh); Skaliert die Schriftgröße basierend auf den kleineren Wert des Viewports */
@@ -134,10 +138,15 @@ nav {
   font-family: monospace;
   text-transform: uppercase;
   font-variant: small-caps;
-  font-size:  min(8vw, 8vh);
+  font-size: min(8vw, 8vh);
   color: #fff;
   text-align: center;
-  cursor: default;
+  cursor: text;
+}
+
+.title-over-particles-h1 ::selection{
+  color: #000;
+  background: hsl(2, 95%, 65%);
 }
 
 .title-over-particles-h3 {
@@ -145,7 +154,12 @@ nav {
   font-size:  min(3vw, 3vh);
   color: #fff;
   text-align: center;
-  cursor: default;
+  cursor: text;
+}
+
+.title-over-particles-h3::selection{
+  color: #000;
+  background: hsl(2, 95%, 65%);
 }
 
 h1 {
@@ -163,12 +177,12 @@ p {
 }
 
 /* Text And Images Block */
-
 /* Indentation & Coloring */
 .indent-left {
   background-color: #fff;
   color: #333;
 }
+
 .indent-left ::selection{
   color: #000;
   background: hsl(2, 95%, 65%);
@@ -179,6 +193,7 @@ p {
   color: #f44;
   /* padding: var(--phi-vw-e); */
 }
+
 .indent-right ::selection{
   color: -inherit;
   background: #f5c8c7e6;;
@@ -204,19 +219,22 @@ section{
   margin: 0 auto; /* Zentriert den Container */
 }
 
-/* flex: 8; Der Text nimmt zwei Drittel der Breite ein */
 .section-text {
   flex: 8;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
 }
 
 .section-spacer {
-  flex: 3; /* Der unsichtbare Platzhalter nimmt ein Drittel der Breite ein */
+  flex: 3;
 }
 
 .section h1,
 .section h1:hover{
   font-weight: bold;
-  font-size:  min(4vw, 4vh);
+  font-size: min(4vw, 4vh);
   font-family: 'Montserrat-L';
   margin: 5vh 0 3vh 0;
 }
@@ -229,7 +247,7 @@ section{
 }
 
 .section p{
-  font-weight:bold;
+  /* font-weight: bold; */
   font-size:  min(2vw, 2vh);
   font-family: 'BBC-CD';
   margin: 3vh 0 5vh 0;
@@ -247,11 +265,13 @@ section{
 
 /* Profile Image */
 .profile-image {
+  border: 3px solid #f1f1f1;
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   margin-bottom: 20px;
+  box-shadow: 0 0 5px #f44;
 }
 
 /* Buttons in Linktree */
@@ -259,7 +279,7 @@ section{
   display: block;
   margin-top: 20px;
   padding: 15px 20px;
-  background-color: #334;
+  background-color: #302f34;
   box-shadow: 0 0 5px #333;
   color: #f1f1f1;
   text-decoration: none;
@@ -293,6 +313,7 @@ section{
   width: 40px;
   height: 40px;
   transition: transform 0.3s;
+  filter: invert(100%) sepia(0%) saturate(225%) hue-rotate(52deg) brightness(113%) contrast(89%);
 }
 
 .icon:hover img {
@@ -301,11 +322,6 @@ section{
 
 .icon:active img {
   transform: scale(0.9);
-}
-
-/* Filter */
-.filter-white {
-  filter: invert(100%) sepia(0%) saturate(225%) hue-rotate(52deg) brightness(113%) contrast(89%);
 }
 
 /* Footer */
