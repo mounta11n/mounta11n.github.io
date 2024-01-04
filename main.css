@@ -12,18 +12,19 @@ body, html {
   font-family: Arial, sans-serif;
 }
 
+/* user-select: auto; Non-prefixed version, currently supported by Chrome, Opera and Edge */
 .no-select {
-  -webkit-user-select: none;  /* Safari */
-  -moz-user-select: none;     /* Firefox */
-  -ms-user-select: none;      /* Internet Explorer/Edge */
-  user-select: none;          /* Non-prefixed version, currently supported by Chrome, Opera and Edge */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .select-on {
-  -webkit-user-select: auto;  /* Safari */
-  -moz-user-select: auto;     /* Firefox */
-  -ms-user-select: auto;      /* Internet Explorer/Edge */
-  user-select: auto;          /* Non-prefixed version, currently supported by Chrome, Opera and Edge */
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
 }
 
 /* display: flex; Aktiviert Flexbox für diesen Container */
@@ -111,7 +112,7 @@ nav {
   background-repeat: no-repeat;
 }
 
-/* ---- particles.js container ---- */
+/* ---- titles container ---- */
 /* top: 50% zentriert die Überschrift vertikal */
 /* left: 50% zentriert die Überschrift horizontal */
 /* transform translate(-50%, -50%) verschiebt die Überschrift zurück, um sie genau zu zentrieren */
@@ -230,6 +231,71 @@ section{
   margin: 3vh 0 5vh 0;
 }
 
+/* linktree-content */
+.linktree-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+/* Profile Image */
+.profile-image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* Social Links and Icons */
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.icon {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.icon img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.icon:hover img, .icon:active img {
+  transform: scale(1.1);
+}
+
+/* Filter */
+.filter-white {
+  filter: invert(100%) sepia(0%) saturate(225%) hue-rotate(52deg) brightness(113%) contrast(89%);
+}
+
+/* Buttons in Linktree */
+.button-linktree {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #f1f1f1;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button-linktree:hover,
+.button-linktree:active {
+  background-color: #f44;
+  color: #fff;
+}
+
 /* Footer */
 footer {
   display: flex;
@@ -240,6 +306,7 @@ footer {
   color: red;
   height: 50px; /* Oder eine andere feste Höhe */
 }
+
 footer a {
   margin: 0 1rem; /* Abstand zwischen den Links */
   color: inherit; /* Erbt Farbe vom Elternelement */
