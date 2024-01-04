@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body, html {
   height: 100%;
   font-family: Arial, sans-serif;
@@ -250,6 +254,29 @@ section{
   margin-bottom: 20px;
 }
 
+/* Buttons in Linktree */
+.button-linktree {
+  display: block;
+  margin-top: 20px;
+  padding: 15px 20px;
+  background-color: #334;
+  box-shadow: 0 0 5px #333;
+  color: #f1f1f1;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: 'BBC-L';
+}
+
+.button-linktree:hover,
+.button-linktree:active {
+  background-color: #f44;
+  color: #fff;
+  box-shadow: 0 0 5px #f44;
+}
+
 /* Social Links and Icons */
 .social-links {
   display: flex;
@@ -268,32 +295,17 @@ section{
   transition: transform 0.3s;
 }
 
-.icon:hover img, .icon:active img {
+.icon:hover img {
   transform: scale(1.1);
+}
+
+.icon:active img {
+  transform: scale(0.9);
 }
 
 /* Filter */
 .filter-white {
   filter: invert(100%) sepia(0%) saturate(225%) hue-rotate(52deg) brightness(113%) contrast(89%);
-}
-
-/* Buttons in Linktree */
-.button-linktree {
-  display: block;
-  margin: 10px auto;
-  padding: 10px 20px;
-  background-color: #333;
-  color: #f1f1f1;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.button-linktree:hover,
-.button-linktree:active {
-  background-color: #f44;
-  color: #fff;
 }
 
 /* Footer */
