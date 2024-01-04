@@ -239,6 +239,22 @@ section{
   margin: 5vh 0 3vh 0;
 }
 
+.section h2,
+.section h2:hover{
+  font-weight: bold;
+  font-size: min(4vw, 4vh);
+  font-family: 'Montserrat-L';
+  margin: 1vh 0 3vh 0;
+}
+
+.section h4,
+.section h4:hover{
+  font-weight: bold;
+  font-size: min(2vw, 2vh);
+  font-family: 'Montserrat';
+  margin: 2vh 0 1vh 0;
+}
+
 .section h5,
 .section h5:hover{
   font-weight: bold;
@@ -290,11 +306,22 @@ section{
   font-family: 'BBC-L';
 }
 
-.button-linktree:hover,
-.button-linktree:active {
+.button-linktree:hover {
   background-color: #f44;
   color: #fff;
   box-shadow: 0 0 5px #f44;
+}
+
+.current-button {
+  color: #fff;
+  text-shadow: 0 0 1px #000, 0 0 2px #fff;
+  background-color: #f44;
+  box-shadow: 0 0 4px #555, 0 0 8px #f44;
+}
+
+.current-button:hover {
+  background-color: #555!important;
+  color: #fff;
 }
 
 /* Social Links and Icons */
@@ -330,9 +357,10 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  background: #efa;
-  color: red;
-  height: 50px; /* Oder eine andere feste Höhe */
+  background: #666;
+  color: #f1f1f1;
+  /* height: 50px; */
+  max-height: var(--topbar-height);
 }
 
 footer a {
