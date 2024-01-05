@@ -51,6 +51,7 @@
 
   --topbar-height:        clamp(30px, 10vh, 80px);
   --button-border-radius: min(0.5vh, 0.5vw);
+  --footer-height:        clamp(30px, 4vh, 50px);
 
   --animation-height: calc(100vh - var(--topbar-height));
   --phi-distance: 200px;
