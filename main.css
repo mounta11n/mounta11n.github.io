@@ -136,7 +136,7 @@ nav {
 
 /* font-size: min(8vw, 8vh); Skaliert die Schriftgröße basierend auf den kleineren Wert des Viewports */
 .title-over-particles-h1 {
-  font-family: monospace;
+  font-family: 'Montserrat';
   text-transform: uppercase;
   font-variant: small-caps;
   font-size: min(8vw, 8vh);
@@ -151,7 +151,7 @@ nav {
 }
 
 .title-over-particles-h3 {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'BBC';
   font-size:  min(3vw, 3vh);
   color: #fff;
   text-align: center;
@@ -218,7 +218,7 @@ p {
 
 .indent-left ::selection{
   color: #000;
-  background: hsl(2, 95%, 65%);
+  background: hsl(2, 96%, 65%);
 }
 
 .indent-right {
@@ -264,41 +264,88 @@ section{
   flex: 3;
 }
 
-.section h1,
-.section h1:hover{
+.indent-left h1,
+.indent-left h1:hover{
   font-weight: bold;
   font-size: min(4vw, 4vh);
   font-family: 'Montserrat-L';
   margin: 5vh 0 3vh 0;
 }
 
-.section h2,
-.section h2:hover{
+.indent-left h2,
+.indent-left h2:hover{
   font-weight: bold;
+  text-shadow: 0 0 1px #666;
   font-size: min(4vw, 4vh);
   font-family: 'Montserrat-L';
   margin: 1vh 0 3vh 0;
 }
 
-.section h4,
-.section h4:hover{
+.indent-left h4,
+.indent-left h4:hover{
   font-weight: bold;
   font-size: min(2vw, 2vh);
   font-family: 'Montserrat';
+  text-decoration: underline;
   margin: 2vh 0 1vh 0;
 }
 
-.section h5,
-.section h5:hover{
+.indent-left h5,
+.indent-left h5:hover{
   font-weight: bold;
   font-size: 2.0rem;
   font-family: 'BBC-L';
 }
 
-.section p{
-  /* font-weight: bold; */
-  font-size:  26px;
-  font-family: 'BBC-CD';
+.indent-right h1,
+.indent-right h1:hover{
+  font-weight: bold;
+  font-size: min(4vw, 4vh);
+  font-family: 'Montserrat-L';
+  margin: 5vh 0 3vh 0;
+}
+
+.indent-right h2,
+.indent-right h2:hover{
+  font-weight: bold;
+  text-shadow: 0 0 1px #666;
+  font-size: min(4vw, 4vh);
+  font-family: 'Montserrat-L';
+  margin: 1vh 0 3vh 0;
+}
+
+.indent-right h4,
+.indent-right h4:hover{
+  font-weight: bold;
+  font-size: min(2vw, 2vh);
+  font-family: 'Montserrat';
+  text-decoration: underline;
+  margin: 2vh 0 1vh 0;
+}
+
+.indent-right h5,
+.indent-right h5:hover{
+  font-weight: bold;
+  font-size: 2.0rem;
+  font-family: 'BBC-L';
+}
+
+.indent-left p{
+  font-family: 'BBC';
+  color: #111;
+  text-shadow: 0 0 1px #888;
+  font-weight:bold;
+  font-size:  18px;
+  line-height: 1.6em;
+  margin: 3vh 0 5vh 0;
+}
+
+.indent-right p{
+  font-family: 'BBC';
+  text-shadow: 0 0 1px #f44;
+  font-weight:bold;
+  font-size:  18px;
+  line-height: 1.6em;
   margin: 3vh 0 5vh 0;
 }
 
