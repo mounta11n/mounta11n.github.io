@@ -7,7 +7,26 @@
   box-sizing:   border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body, html {
+@import url('variables.css');
+@import url('fonts.css');
+
+* {
+  margin:       0;
+  padding:      0;
+  box-sizing:   border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, html {
+<<<<<<<-main
   height:       100%;
   font-family:  Arial, sans-serif;
 }
@@ -66,126 +85,406 @@ nav {
 #particles-js {
   position: relative;
   width: 100%;
-  height: 50vh;
+===
+  he  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #333;
+}
+
+/* user-select: auto; Non-prefixed version, currently supported by Chrome, Opera and Edge */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.select-on {
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+
+/* display: flex; Aktiviert Flexbox für diesen Container */
+/* justify-content: space-around; Verteilt die Elemente gleichmäßig mit Raum dazwischen */
+/* align-items: center; Zentriert die Elemente vertikal */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--topbar-height);
+  box-shadow: 0 0 5px #333, 0 -10px 15px #333, 0px -15px 25px #333;
+  z-index: 3;
+}
+
+/* flex: 1; bedeutet jeder Link nimmt den gleichen Anteil des Raumes ein */
+.nav a {
+  flex: 1;
+  /* float: right; */
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-decoration: none;
+  font-family: 'BBC-L';
+  font-size: min(1.8vh, 1.8vw);
+  border-radius: var(--button-border-radius);
+}
+
+.nav a:hover {
+  background-color: hsl(0, 100%, 63%);
+  color: #f2f2f2;
+  border-radius: var(--button-border-radius);
+}
+
+.nav a:active {
+  background-color: hsl(0, 85%, 55%);
+  color: #f2f2f2;
+  border-radius: 4px;
+}
+
+/* .nav-hint {
+  align-items: center;
+  justify-content: space-between;
+  color: #ffff00;
+
+}
+
+.nav-hint:hover {
+  background-color: hsl(0, 100%, 63%);
+  color: #f2f2f2;
+  border-radius: 4px;
+}
+
+.logo {
+  max-height: clamp(50px, 10vh, 80px);
+  height: clamp(50px, 10vh, 80px);
+}
+
+.logo img {
+  max-height: clamp(50px, 10vh, 80px);
+}
+
+.menu-icon {
+  display: none;
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+} */
+
+/* ---- particles.js container ---- */
+/* position: relative Ermöglicht die absolute Positionierung von Kind-Elementen */
+#particles-js {
+  position: relative;
+  margin-top: var(--topbar-height);
+  width: 100vw;
+>>>>>>>+origin/main
+: 50vh;
   background-color: #b81924;
   /* background-image: url(''); */
   background-size:contain;
   background-position: 50% 100%;
   background-repeat: no-repeat;
+  z-index: 1;
 }
 
-.title-over-particles-h1 {
+/* ---- titles container ---- */
+/* top: 50% zentriert die Überschrift vertikal */
+/* left: 50% zentriert die Überschrift horizontal */
+/* transform translate(-50%, -50%) verschiebt die Überschrift zurück, um sie genau zu zentrieren */
+.title-over-particles-container {
   position: absolute;
-  top: 50%; /* Zentriert die Überschrift vertikal */
-  left: 50%; /* Zentriert die Überschrift horizontal */
-  transform: translate(-50%, -50%); /* Verschiebt die Überschrift zurück, um sie genau zu zentrieren */
-  font-size: 8vw; /* Skaliert die Schriftgröße basierend auf der Breite des Viewports */
-  color: #fff; /* oder eine andere Farbe, je nach Hintergrund */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 0px 0px 1px #fff, 0px 0px 2px #f44, 3px 1px 5px #b81924;
+  z-index: 2;
+}
+
+/* font-size: min(8vw, 8vh); Skaliert die Schriftgröße basierend auf den kleineren Wert des Viewports */
+.title-over-particles-h1 {
+  font-family: monospace;
+  text-transform: uppercase;
+  font-variant: small-caps;
+  font-size: min(8vw, 8vh);
+  color: #fff;
   text-align: center;
-  text-shadow: 0 0 1px #fff, 0 0 5px #f44, 0 0 13px #cb4c48, 0px -3px 15px #666;
-  z-index: 2; /* Stellt sicher, dass die Überschrift über den Partikeln liegt */
+  cursor: text;
+}
+
+.title-over-particles-h1 ::selection{
+  color: #000;
+  background: hsl(2, 95%, 65%);
 }
 
 .title-over-particles-h3 {
-  position: absolute;
-  top: 62%; /* Zentriert die Überschrift vertikal */
-  left: 50%; /* Zentriert die Überschrift horizontal */
-  transform: translate(-50%, -50%); /* Verschiebt die Überschrift zurück, um sie genau zu zentrieren */
-  font-size: 5vw; /* Skaliert die Schriftgröße basierend auf der Breite des Viewports */
-  color: #fff; /* oder eine andere Farbe, je nach Hintergrund */
+  font-family: 'Courier New', Courier, monospace;
+  font-size:  min(3vw, 3vh);
+  color: #fff;
   text-align: center;
-  z-index: 2; /* Stellt sicher, dass die Überschrift über den Partikeln liegt */
+  cursor: text;
+}
+
+.title-over-particles-h3::selection{
+  color: #000;
+  background: hsl(2, 95%, 65%);
 }
 
 h1 {
-  font-family: 'Montserrat-L'!important;
-  font-variant: small-caps!important;
+  font-family: 'Montserrat-L';
+  /* font-variant: small-caps; */
 }
 
 h5 {
-  font-family: 'Montserrat-L'!important;
-  text-transform: uppercase!important;
+  font-family: 'Montserrat-L';
+  text-transform: uppercase;
 }
 
 p {
-  font-family: BBC-L!important;
-}
-
-/* Text And Images Block */
-section{
-  padding: var(--phi-vh-f) var(--phi-vw-f)!important;
-}
-
-.section-content {
-  display: flex; /* Aktiviert Flexbox für diesen Container */
-  max-width: 768px; /* Setzt die maximale Breite für den Container */
-  margin: 0 auto; /* Zentriert den Container */
-}
-
-.section-text {
-  flex: 2; /* Der Text nimmt zwei Drittel der Breite ein */
-}
-
-.section-spacer {
-  flex: 1; /* Der unsichtbare Platzhalter nimmt ein Drittel der Breite ein */
-}
-
-.section p{
-  font-weight: bold;
-  font-size: 1.5rem !important;
-  font-family: 'BBC-CD';
-}
-.section h1,
-.section h1:hover{
-  font-weight: bold;
-  font-size: 2.5rem !important;
-  font-family: 'BBC-XL';
-}
-.section h5,
-.section h5:hover{
-  font-weight: bold;
-  font-size: 2.0rem !important;
   font-family: 'BBC-L';
 }
 
+.hint {
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffff00;
+  color: #000;
+  font-weight: bolder;
+
+}
+
+.solutions-container {
+  display:none;
+  z-index: 1;
+}
+
+#spacerVertical {
+  height: 50vh;
+}
+
+/* Text And Images Block */
+/* Indentation & Coloring */
 .indent-left {
   background-color: #fff;
   color: #333;
 }
+
 .indent-left ::selection{
   color: #000;
   background: hsl(2, 95%, 65%);
-}
-.indent-left p {
-  max-width: 768px;
 }
 
 .indent-right {
   background-color: #ededed;
   color: #f44;
-  /* padding: var(--phi-vw-e)!important; */
+  /* padding: var(--phi-vw-e); */
 }
+
 .indent-right ::selection{
   color: -inherit;
   background: #f5c8c7e6;;
 }
-.indent-right p {
-  max-width: 768px;
+
+ /* debug borders */
+/* section           {border: 5px solid red;}
+.section-content  {border: 4px solid orange;}
+.section-text     {border: 3px solid yellow;}
+.section-spacer   {border: 3px solid green;}
+.section h1       {border: 2px solid turquoise;}
+.section h5       {border: 2px solid turquoise;}
+.section p        {border: 2px solid blue;} */
+
+/* Section */
+section{
+  padding: 0 var(--phi-vw-d);
+}
+
+.section-content {
+  display: flex; /* Aktiviert Flexbox für diesen Container */
+  max-width: 1024px; /* Setzt die maximale Breite für den Container */
+  margin: 0 auto; /* Zentriert den Container */
+}
+
+.section-text {
+  flex: 8;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+
+.section-spacer {
+  flex: 3;
+}
+
+.section h1,
+.section h1:hover{
+  font-weight: bold;
+  font-size: min(4vw, 4vh);
+  font-family: 'Montserrat-L';
+  margin: 5vh 0 3vh 0;
+}
+
+.section h2,
+.section h2:hover{
+  font-weight: bold;
+  font-size: min(4vw, 4vh);
+  font-family: 'Montserrat-L';
+  margin: 1vh 0 3vh 0;
+}
+
+.section h4,
+.section h4:hover{
+  font-weight: bold;
+  font-size: min(2vw, 2vh);
+  font-family: 'Montserrat';
+  margin: 2vh 0 1vh 0;
+}
+
+.section h5,
+.section h5:hover{
+  font-weight: bold;
+  font-size: 2.0rem;
+  font-family: 'BBC-L';
+}
+
+.section p{
+  /* font-weight: bold; */
+  font-size:  min(2vw, 2vh);
+  font-family: 'BBC-CD';
+  margin: 3vh 0 5vh 0;
+}
+
+/* linktree-content */
+.linktree-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+/* Profile Image */
+.profile-image {
+  border: 3px solid #f1f1f1;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 0 5px #f44;
+}
+
+.card {
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10vh;
+}
+
+/* Card Image */
+.card img {
+  display: block;
+  border: 3px solid #f1f1f1;
+  border-radius: 15px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  box-shadow: 0 0 5px #333;
+}
+
+/* Buttons in Linktree */
+.button-linktree {
+  display: block;
+  margin-top: 20px;
+  padding: 15px 20px;
+  background-color: #302f34;
+  box-shadow: 0 0 5px #333;
+  color: #f1f1f1;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: 'BBC-L';
+}
+
+.button-linktree:hover {
+  background-color: #f44;
+  color: #fff;
+  box-shadow: 0 0 5px #f44;
+}
+
+.current-button {
+  color: #fff;
+  text-shadow: 0 0 1px #000, 0 0 2px #fff;
+  background-color: #f44;
+  box-shadow: 0 0 4px #555, 0 0 8px #f44;
+}
+
+.current-button:hover {
+  background-color: #555!important;
+  color: #fff;
+}
+
+/* Social Links and Icons */
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.icon {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.icon img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+  filter: invert(100%) sepia(0%) saturate(225%) hue-rotate(52deg) brightness(113%) contrast(89%);
+}
+
+.icon:hover img {
+  transform: scale(1.1);
+}
+
+.icon:active img {
+  transform: scale(0.9);
 }
 
 /* Footer */
 footer {
   display: flex;
+  width: 100vw;
+  bottom: 0;
+  height: var(--footer-height);
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  background: #efa;
-  color: red;
-  height: 50px; /* Oder eine andere feste Höhe */
+  background: #666;
+  color: #f1f1f1;
+  /* height: 50px; */
 }
+
+footer ::selection{
+  color: #000;
+  background: #f5c8c7e6;;
+}
+
 footer a {
   margin: 0 1rem; /* Abstand zwischen den Links */
-  color: inherit; /* Erbt Farbe vom Elternelement */
+  color: inherit;
   text-decoration: none; /* Keine Unterstreichung */
 }
 
@@ -194,5 +493,78 @@ footer a {
 @media (max-width: 768px) {
   .main-content {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Solutions Stylesheet */
+/* Grundlegende Stildefinitionen */
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Abstand zwischen Text und Bild */
+  margin-bottom: 40px; /* Abstand zum nächsten Abschnitt */
+}
+
+.text-content, .image-content {
+  flex: 1; /* Beide Spalten nehmen verfügbaren Platz ein */
+}
+
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+}
+
+.additional-images img {
+  width: 49%; /* Zwei Bilder nebeneinander mit etwas Platz dazwischen */
+  height: auto;
+}
+
+.cta-button {
+  text-align: center; /* Zentriert den Button */
+  margin-top: 20px; /* Abstand nach oben */
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #007bff; /* Blau als Beispiel */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Dunkleres Blau beim Hover */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  /* Anpassungen für Tablets */
+}
+
+@media (max-width: 768px) {
+  /* Anpassungen für Mobilgeräte */
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .text-content, .image-content, .image-gallery {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Anpassungen für sehr kleine Mobilgeräte */
+}
+
+@media (max-width: 768px) {
+  .additional-images img {
+    width: 100%; /* Auf kleinen Bildschirmen untereinander */
   }
 }

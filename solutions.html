@@ -2,28 +2,44 @@
 <html lang="de">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<title>Solutions - Mount AI</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KI-Lösungen Datenschutz- und Privatsphäre-gerecht - Mount AI</title>
+  <link rel="stylesheet" href="main.css">
 </head>
+<body class="no-select">
 
-<body>
-  <div class="header">
-  <!-- Header mit dem Hauptmenü -->
-    <div class="logo">
-      <img src="assets/logo.svg" alt="Logo">
+<!-- Header -->
+<header>
+
+  <!-- Navbar -->
+  <nav class="nav">
+      <a href="index.html">Startseite</a>
+      <a href="solutions.html" class="current-button">Lösungen</a>
+      <!-- <a href="index.html" class="logo">
+          <img src="assets/logo.svg" alt="Logo">
+      </a> -->
+      <a href="about.html">Über Mich</a>
+      <a href="https://geschenkwald.github.io" target="_blank">Blog</a>
+  </nav>
+
+  <!-- Particles (Animation) -->
+  <div id="particles-js">
+    <div class="title-over-particles-container">
+      <h1 class="title-over-particles-h1">
+        Neuronale
+        <br>
+        Netzwerke
+      </h1>
+      <br>
+      <h1 class="title-over-particles-h3">
+        menschlich + maschinell
+      </h1>
     </div>
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    <nav class="nav">
-      <div class="nav-item"><a href="index.html">Startseite</a></div>
-      <div class="nav-item"><a href="solutions.html">Lösungen</a></div>
-      <div class="nav-item"><a href="about.html">Über Mich</a></div>
-      <div class="nav-item"><a href="https://publish.obsidian.md/mountaiin/New-Era" target="_blank">Blog</a></div>
-    </nav>
-    <span class="mobile-nav-toggle" onclick="toggleMobileNav()">Menü</span>
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
   </div>
+</header>
 <!--  -->
   <!-- <div class="main-container"> -->
   <!-- Anker-Links -->
@@ -38,33 +54,45 @@
       <a href="#contact">Kontakt</a>
     </div> -->
   <!-- Inhaltsabschnitte -->
-    <!-- <div class="content"> -->
-      <div>
-        <!-- <h1>Neuronale Netzwerke</h1>
-        <h1>menschlich und maschinell</h1> -->
-        <div id="particles-js"></div>
-        <script src="js/particles.js"></script>
-        <script src="js/app.js"></script>
+  <div class="hint select-on">
+    <h1>Seite befindet sich in Wartung</h1>
+  </div>
+
+  <section id="datenschutzfreundliche-ki" class="section">
+    <div class="content-wrapper">
+      <div class="text-content">
+        <h2>Datenschutzfreundliche KI</h2>
+        <p>Erleben Sie die Vorteile künstlicher Intelligenz, ohne Ihre Privatsphäre zu gefährden. Meine spezialisierten KI-Lösungen respektieren Ihre Datenhoheit, indem sie lokal auf Ihrem Gerät operieren und so den Bedarf an externer Datenübertragung minimieren. Genießen Sie personalisierte KI-Funktionalitäten mit der Gewissheit, dass Ihre Informationen sicher und geschützt bleiben.</p>
       </div>
-      <div>
+      <div class="image-gallery">
+        <img src="assets/pvai-startseite.png" alt="Datenschutzfreundliche KI Hauptbild" class="main-image">
+        <div class="additional-images">
+          <img src="assets/ki-example-detail1.jpg" alt="Detailansicht der KI-Anwendung">
+          <img src="assets/ki-example-detail2.jpg" alt="Weitere Detailansicht der KI-Anwendung">
+        </div>
+      </div>
+    </div>
+    <div class="cta-button">
+      <a href="kontakt.html" class="btn">Projekt anfragen</a>
+    </div>
+  </section>
+
+    <div class="solutions-container">
         <section id="websites" class="section">
           <h2>Webseiten</h2>
           <p>Inhalt für Webseiten...</p>
         </section>
-      </div>
     <!--  -->
-      <div class="card-container">
         <div class="card">
-          <img src="assets/Yazan-und-Birte.jpeg" alt="Avatar" style="width:100%">
-          <h4><b>Jane Doe</b></h4>
-          <p>Interior Designer</p>
+          <img src="assets/pvai-startseite.png" alt="Avatar">
+          <h4>Komplexe Webseite</h4>
+          <h4>www.photovoltai.de</h4>
         </div>
         <div class="card">
-          <img src="assets/ui-llama-app.jpg" alt="Avatar" style="width:100%">
-          <h4><b>Jane Doe</b></h4>
-          <p>Interior Designer</p>
+          <img src="assets/ui-llama-app.jpg" alt="Avatar">
+          <h4><b>KI Benutzer-Oberfläche</b></h4>
+          <p>Design</p>
         </div>
-      </div>
     <!--  -->
       <section id="applications" class="section">
         <h2>Anwendungen</h2>
@@ -99,25 +127,40 @@
       <section id="contact" class="section">
         <h2>Kontakt</h2>
         <p>Inhalt für Kontakt...</p>
-        </section>
+      </section>
+    </div>
     <!--  -->
-    <!-- </div>
-  </div> -->
-<!--  -->
+      <section id="spacerVertical"></section>
+
+<!-- Footer -->
+<footer>
+  <a href="/impressum" class="select-on">Impressum</a>
+</footer>
+
+<!-- Javascript -->
   <script>
-    function toggleMenu() {
-      var nav = document.querySelector('.nav');
-      if (nav.style.display === 'block') {
-        nav.style.display = 'none';
-      } else {
-        nav.style.display = 'block';
+    var count_particles, stats, update;
+    stats = new Stats;
+    stats.setMode(0);
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.left = '0px';
+    stats.domElement.style.top = '0px';
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector('.js-count-particles');
+    update = function() {
+      stats.begin();
+      stats.end();
+      if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+        count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
       }
-    }
+      requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
   //
-    function toggleMobileNav() {
-      var sidebar = document.querySelector('.sidebar');
-      sidebar.classList.toggle('open');
-    }
+
   </script>
 </body>
 </html>
+
+
+
