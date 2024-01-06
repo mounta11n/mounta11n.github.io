@@ -267,6 +267,19 @@ p {
   z-index: 1;
 }
 
+.solutions-title {
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 3em;
+  color: #f1f1f1;
+  background-color: #333;
+  font-weight: bolder;
+  font-family: 'Montserrat-L';
+  padding: 0 10vw;
+  margin: 10vh 0;
+}
+
 #spacerVertical {
   height: 50vh;
 }
@@ -305,7 +318,7 @@ p {
 
 /* Section */
 section{
-  padding: 0 var(--phi-vw-d);
+  padding:  var(--phi-vh-f) var(--phi-vw-d) var(--phi-vh-d);
 }
 
 .section-content {
@@ -359,7 +372,7 @@ section{
 
 .section p{
   /* font-weight: bold; */
-  font-size:  min(2vw, 2vh);
+  font-size:  26px;
   font-family: 'BBC-CD';
   margin: 3vh 0 5vh 0;
 }
@@ -527,7 +540,8 @@ footer a {
 
 .cta-button {
   text-align: center; /* Zentriert den Button */
-  margin-top: 20px; /* Abstand nach oben */
+  margin: 20px; /* Abstand nach oben */
+  padding: 10px 20px;
 }
 
 .btn {
