@@ -64,7 +64,7 @@ nav {
   margin:  0 0.5vw;
   text-decoration: none;
   font-family: 'BBC-L';
-  font-size: 1.1em;
+  font-size: 0.9em;
   /* font-size: min(1.8vh, 1.8vw); */
   border-radius: var(--button-border-radius);
 }
@@ -608,7 +608,7 @@ footer a {
     margin:  0 0.5vw;
     text-decoration: none;
     font-family: 'BBC-L';
-    font-size: 0.9em;
+    font-size: 0.8em;
     border-radius: var(--button-border-radius);
   }
 }

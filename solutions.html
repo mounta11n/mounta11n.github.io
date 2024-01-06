@@ -45,8 +45,9 @@
   <div id="particles-js">
     <div class="title-over-particles-container">
       <h1 class="title-over-particles-h1">
-        Lösungen, die mitdenken:
+        Lösungen,
       </h1>
+      <h1  class="title-over-particles-h1" id="myElement">die mitdenken</h1>
       <br>
       <h1 class="title-over-particles-h3">
         Maßgeschneiderte KI für Ihre Bedürfnisse
@@ -75,6 +76,17 @@
 <!-- Start of Main Container -->
 <div class="main-container">
 
+
+  <!-- 1. Webdesign -->
+  <section id="webdesign" class="section indent-left">
+    <div class="content-wrapper">
+      <!-- Text -->
+      <div class="text-content">
+        <!-- <h2>Webseiten</h2> -->
+        <p>In einer Welt, in der Technologie immer intelligenter wird, biete ich Lösungen, die nicht nur Daten verarbeiten, sondern auch verstehen und lernen. Von datenschutzfreundlichen KI-Anwendungen bis hin zu fortschrittlichen Automatisierungssystemen – entdecken Sie, wie meine maßgeschneiderten Lösungen Ihr Leben und Ihre Arbeit bereichern können. Jede Lösung ist das Ergebnis einer tiefgründigen Auseinandersetzung mit den Bedürfnissen meiner Kunden und dem neuesten Stand der Technik.</p>
+      </div>
+    </div>
+  </section>
 <!-- First Accordion - Button with Title -->
   <button class="accordion">
     <h2>Web- und UI-Entwicklung</h2>
@@ -388,6 +400,16 @@
         }
       });
     }
+
+    // The following code is used to resize the font based on the window size
+    var element = document.getElementById('myElement');
+    var width = element.offsetWidth;
+    element.style.fontSize = (width * 0.1) + 'px';
+    window.onresize = function() {
+    var element = document.getElementById('myElement');
+    var width = element.offsetWidth;
+    element.style.fontSize = (width * 0.1) + 'px';
+  }
   </script>
 
   </body>
