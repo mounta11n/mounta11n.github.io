@@ -49,7 +49,7 @@
   --compare-top-button-bg: var(--nuance-color-1);
   --compare-top-button-fg: var(--secondary-color-2);
 
-  --topbar-height:        clamp(30px, 10vh, 80px);
+  --topbar-height:        clamp(30px, 4vh, 50px);
   --button-border-radius: min(0.5vh, 0.5vw);
   --footer-height:        clamp(30px, 4vh, 50px);
 
@@ -69,6 +69,9 @@
   --phi-vw-f: calc(var(--phi-vw-e) / var(--phi));
   --phi-vw-g: calc(var(--phi-vw-f) / var(--phi));
   --phi-vw-h: calc(var(--phi-vw-g) / var(--phi));
+  --phi-vw-i: calc(var(--phi-vw-h) / var(--phi));
+  --phi-vw-j: calc(var(--phi-vw-i) / var(--phi));
+  --phi-vw-k: calc(var(--phi-vw-j) / var(--phi));
 
   --phi-vh: 100vh;
   --phi-vh-a: calc(var(--phi-vh)   / var(--phi));
@@ -79,4 +82,7 @@
   --phi-vh-f: calc(var(--phi-vh-e) / var(--phi));
   --phi-vh-g: calc(var(--phi-vh-f) / var(--phi));
   --phi-vh-h: calc(var(--phi-vh-g) / var(--phi));
+  --phi-vh-i: calc(var(--phi-vh-h) / var(--phi));
+  --phi-vh-j: calc(var(--phi-vh-i) / var(--phi));
+  --phi-vh-k: calc(var(--phi-vh-j) / var(--phi));
 }
