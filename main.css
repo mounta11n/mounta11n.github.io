@@ -133,6 +133,7 @@ nav {
   position: absolute;
   top: 50%;
   left: 50%;
+  height: 25vh;
   transform: translate(-50%, -50%);
   text-shadow: 0px 0px 1px #fff, 0px 0px 2px #f44, 3px 1px 5px #b81924;
   z-index: 2;
@@ -141,6 +142,7 @@ nav {
 /* font-size: min(8vw, 8vh); Skaliert die Schriftgröße basierend auf den kleineren Wert des Viewports */
 .title-over-particles-h1 {
   font-family: 'Montserrat';
+  font-family: 'Montserrat-L';
   text-transform: uppercase;
   font-variant: small-caps;
   font-size: min(8vw, 8vh);
@@ -149,7 +151,7 @@ nav {
   cursor: text;
 }
 
-.title-over-particles-h1 ::selection{
+.title-over-particles-h1::selection{
   color: #000;
   background: hsl(2, 95%, 65%);
 }
@@ -428,12 +430,13 @@ section {
 .current-button {
   color: #fff;
   text-shadow: 0 0 1px #000, 0 0 2px #fff;
-  background-color: #f44;
+  background-color: hsl(0, 100%, 63%);
   box-shadow: 0 0 4px #555, 0 0 8px #f44;
 }
 
 .current-button:hover {
-  background-color: #555!important;
+  background-color: #555;
+  background-color: hsl(358, 85%, 45%)!important;
   color: #fff;
 }
 
@@ -608,7 +611,9 @@ footer a {
     margin:  0 0.5vw;
     text-decoration: none;
     font-family: 'BBC-L';
-    font-size: 0.8em;
+    font-weight: bold;
+    /* font-weight: bold; */
+    /* font-size: 0.8em; */
     border-radius: var(--button-border-radius);
   }
 }

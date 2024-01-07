@@ -47,10 +47,11 @@
       <h1 class="title-over-particles-h1">
         Lösungen,
       </h1>
-      <h1  class="title-over-particles-h1" id="myElement">die mitdenken</h1>
+      <h1  class="title-over-particles-h1" id="dynamicFontSize">die mitdenken</h1>
       <br>
       <h1 class="title-over-particles-h3">
-        Maßgeschneiderte KI für Ihre Bedürfnisse
+        Maßgeschneiderte Software  & KI
+        <!-- <br>für Ihre Bedürfnisse -->
       </h1>
     </div>
     <script src="js/particles.js"></script>
@@ -77,11 +78,12 @@
 <div class="main-container">
 
 
-  <!-- 1. Webdesign -->
-  <section id="webdesign" class="section indent-left">
+  <!-- 0. Introduction -->
+  <section id="introduction" class="section indent-left">
     <div class="content-wrapper">
       <!-- Text -->
       <div class="text-content">
+        <h1>Arbeiten Sie smart. Nicht hart.</h1>
         <!-- <h2>Webseiten</h2> -->
         <p>In einer Welt, in der Technologie immer intelligenter wird, biete ich Lösungen, die nicht nur Daten verarbeiten, sondern auch verstehen und lernen. Von datenschutzfreundlichen KI-Anwendungen bis hin zu fortschrittlichen Automatisierungssystemen – entdecken Sie, wie meine maßgeschneiderten Lösungen Ihr Leben und Ihre Arbeit bereichern können. Jede Lösung ist das Ergebnis einer tiefgründigen Auseinandersetzung mit den Bedürfnissen meiner Kunden und dem neuesten Stand der Technik.</p>
       </div>
@@ -302,68 +304,17 @@
 </div>
 <!-- End of Main Container -->
 
-<!-- <img id="myImg" src="assets/unused/ki-offline-chat.jpg" alt="Northern Lights, Norway" width="300" height="200"> -->
-
-<!-- The Modal -->
-<!-- <span class="close">
-  <div id="myModal" class="modal">
-    <img class="modal-content" id="img01">
-  </div>
-</span> -->
-
-<!-- <img id="newImg" src="assets/pvai-startseite-m.jpeg" alt="Northern Lights, Norway" width="300" height="300">
-
-  <span class="close">
-    <div id="newModal" class="modal">
-      <img class="modal-content" id="img02">
-    </div>
-  </span> -->
-
-
-
-<!--
-  <img id="Image-1" src="assets/pvai-startseite-m.jpeg" alt="Web Design Hauptbild" class="main-image">
-  <span class="close">
-    <div id="Modal-1" class="modal">
-      <img class="modal-content" id="spanImage-1">
-    </div>
-  </span>
-
-  <script>
-    // Get the modal
-    var modal = document.getElementById('newModal');
-
-    function setupModal(imgId, modalId, modalImgId) {
-      var modal = document.getElementById(modalId);
-      var img = document.getElementById(imgId);
-      var modalImg = document.getElementById(modalImgId);
-      img.onclick = function(){
-          modal.style.display = "block";
-          modalImg.src = this.src;
-      }
-
-      var span = document.getElementsByClassName("close")[0];
-      span.onclick = function() {
-          modal.style.display = "none";
-      }
-    }
-
-    setupModal('Image-1', 'Modal-1', 'spanImage-1');
-    setupModal('Image-2', 'Modal-2', 'spanImage-2');
-    setupModal('Image-3', 'Modal-3', 'spanImage-3');
-    // etc ...
-    </script>
--->
-
 <!-- Space in between -->
 <section id="spacerVertical"></section>
 
 <!-- Footer -->
 <footer>
-  <a href="/impressum" class="select-on">Impressum</a>
+  <a href="/impressum" class="select-on">impressum</a>
 </footer>
 
 <!-- Javascript -->
+
+<!-- Particles -->
   <script>
     var count_particles, stats, update;
     stats = new Stats;
@@ -382,9 +333,9 @@
       requestAnimationFrame(update);
     };
     requestAnimationFrame(update);
-  //
   </script>
 
+<!-- Accordion -->
   <script>
     var acc = document.getElementsByClassName("accordion");
     var i;
@@ -400,16 +351,18 @@
         }
       });
     }
+  </script>
 
-    // The following code is used to resize the font based on the window size
-    var element = document.getElementById('myElement');
-    var width = element.offsetWidth;
-    element.style.fontSize = (width * 0.1) + 'px';
-    window.onresize = function() {
-    var element = document.getElementById('myElement');
-    var width = element.offsetWidth;
-    element.style.fontSize = (width * 0.1) + 'px';
-  }
+<!-- Adaptive Font-Size -->
+  <script>
+    function adjustFontSize() {
+      var element = document.getElementById('dynamicFontSize');
+      var width = element.offsetWidth;
+      element.style.fontSize = (width * 0.113) + 'px';
+    }
+
+    window.onresize = adjustFontSize;
+    window.onload = adjustFontSize;
   </script>
 
   </body>
