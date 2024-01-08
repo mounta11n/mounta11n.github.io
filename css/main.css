@@ -1,7 +1,3 @@
-@import url('variables.css');
-@import url('fonts.css');
-@import url('testings.css');
-
 * {
   margin: 0;
   padding: 0;
@@ -140,7 +136,7 @@ nav {
 }
 
 /* font-size: min(8vw, 8vh); Skaliert die Schriftgröße basierend auf den kleineren Wert des Viewports */
-.title-over-particles-h1 {
+.title-over-particles-first {
   font-family: 'Montserrat';
   font-family: 'Montserrat-L';
   text-transform: uppercase;
@@ -151,12 +147,28 @@ nav {
   cursor: text;
 }
 
-.title-over-particles-h1::selection{
+.title-over-particles-first::selection{
   color: #000;
   background: hsl(2, 95%, 65%);
 }
 
-.title-over-particles-h3 {
+.title-over-particles-second {
+  font-family: 'Montserrat';
+  font-family: 'Montserrat-L';
+  text-transform: uppercase;
+  font-variant: small-caps;
+  font-size: min(8vw, 8vh);
+  color: #fff;
+  text-align: center;
+  cursor: text;
+}
+
+.title-over-particles-second::selection{
+  color: #000;
+  background: hsl(2, 95%, 65%);
+}
+
+.title-over-particles-third {
   font-family: 'BBC';
   font-size:  min(3vw, 3vh);
   color: #fff;
@@ -164,7 +176,16 @@ nav {
   cursor: text;
 }
 
-.title-over-particles-h3::selection{
+.title-over-particles-typewriter {
+  font-family: 'BBC';
+  font-size:  min(3vw, 3vh);
+  color: #fff;
+  text-align: center;
+  cursor: text;
+  margin: auto;
+}
+
+.title-over-particles-third::selection{
   color: #000;
   background: hsl(2, 95%, 65%);
 }
@@ -174,9 +195,45 @@ h1 {
   /* font-variant: small-caps; */
 }
 
+h2 {
+  font-family: 'Montserrat-L';
+}
+
+.section-h2 {
+  font-weight: bold;
+  text-shadow: 0 0 1px #666;
+  font-size: 2em;
+  font-family: 'Montserrat-L';
+  margin: 1vh 0 3vh 0;
+}
+
+.small-heading {
+  font-family: 'Montserrat';
+}
+
+.small-heading-initial {
+  display: none;
+}
+
+.large-heading {
+  font-family: 'Montserrat';
+}
+
+h3 {
+  font-family: 'Montserrat';
+}
+
+h4 {
+  font-family: 'Montserrat';
+}
+
 h5 {
   font-family: 'Montserrat-L';
   text-transform: uppercase;
+}
+
+h6 {
+  font-family: 'Montserrat';
 }
 
 p {
@@ -270,13 +327,13 @@ section {
   flex: 3;
 }
 
-.indent-left h1,
+/* .indent-left h1,
 .indent-left h1:hover{
   font-weight: bold;
   font-size: min(4vw, 4vh);
   font-family: 'Montserrat-L';
   margin: 5vh 0 3vh 0;
-}
+} */
 
 .indent-left h2,
 .indent-left h2:hover{
@@ -287,8 +344,17 @@ section {
   margin: 1vh 0 3vh 0;
 }
 
-.indent-left h4,
-.indent-left h4:hover{
+.indent-left .section-h2,
+.indent-left .section-h2:hover{
+  font-weight: bold;
+  text-shadow: 0 0 1px #666;
+  font-size: 2em;
+  font-family: 'Montserrat-L';
+  margin: 1vh 0 3vh 0;
+}
+
+.indent-left .small-heading,
+.indent-left .small-heading:hover{
   font-weight: bold;
   font-size: 1em;
   font-family: 'Montserrat';
@@ -296,19 +362,20 @@ section {
   margin: 2vh 0 1vh 0;
 }
 
+.indent-left .large-heading,
+.indent-left .large-heading:hover{
+  font-weight: bold;
+  text-shadow: 0 0 1px #666;
+  font-size: 2em;
+  font-family: 'Montserrat-L';
+  margin: 1vh 0 3vh 0;
+}
+
 .indent-left h5,
 .indent-left h5:hover{
   font-weight: bold;
   font-size: 2.0rem;
   font-family: 'BBC-L';
-}
-
-.indent-right h1,
-.indent-right h1:hover{
-  font-weight: bold;
-  font-size: min(4vw, 4vh);
-  font-family: 'Montserrat-L';
-  margin: 5vh 0 3vh 0;
 }
 
 .indent-right h2,
@@ -320,13 +387,32 @@ section {
   margin: 1vh 0 3vh 0;
 }
 
-.indent-right h4,
-.indent-right h4:hover{
+.indent-right .section-2,
+.indent-right .section-2:hover{
+  font-weight: bold;
+  text-shadow: 0 1px 1px #f88;
+  font-size: 2em;
+  font-family: 'Montserrat-L';
+  margin: 1vh 0 3vh 0;
+}
+
+.indent-right .small-heading,
+.indent-right .small-heading:hover{
   font-weight: bold;
   font-size: 1em;
+  height: 1.1em;
   font-family: 'Montserrat';
   text-decoration: underline;
-  margin: 2vh 0 1vh 0;
+  margin: 0vh 0 1vh 0;
+}
+
+.indent-right .large-heading,
+.indent-right .large-heading:hover{
+  font-weight: bold;
+  text-shadow: 0 1px 1px #f88;
+  font-size: 2em;
+  font-family: 'Montserrat-L';
+  margin: 1vh 0 3vh 0;
 }
 
 .indent-right h5,
@@ -556,81 +642,6 @@ footer a {
   /* box-shadow: 0px 0px 30px #44a; */
 }
 
-/* Responsive Design */
-
-/* Anpassungen für Tablets */
-@media (max-width: 1024px) {
-  .section-spacer {
-    flex: 0;
-  }
-.section-content {
-  display: flex; /* Aktiviert Flexbox für diesen Container */
-  max-width: 768px; /* Setzt die maximale Breite für den Container */
-  margin: 0 auto; /* Zentriert den Container */
-
-}
-}
-
-/* Anpassungen für Mobilgeräte */
-@media (max-width: 768px) {
-  .content-wrapper {
-    flex-direction: column;
-  }
-
-  .text-content, .image-content, .image-gallery {
-    width: 100%;
-  }
-
-  .additional-images img {
-    width: 100%; /* Auf kleinen Bildschirmen untereinander */
-  }
-
-  nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    padding: 0.5vh 0.8vw;
-    /* height: var(--topbar-height); */
-    box-shadow: 0 0 5px #333, 0 -10px 15px #333, 0px -15px 25px #333;
-    z-index: 3;
-  }
-
-  /* flex: 1; bedeutet jeder Link nimmt den gleichen Anteil des Raumes ein */
-  .nav a {
-    flex: 1;
-    /* float: right; */
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    margin:  0 0.5vw;
-    text-decoration: none;
-    font-family: 'BBC-L';
-    font-weight: bold;
-    /* font-weight: bold; */
-    /* font-size: 0.8em; */
-    border-radius: var(--button-border-radius);
-  }
-}
-
-/* Anpassungen für sehr kleine Mobilgeräte */
-@media (max-width: 480px) {
-}
-
-
- /* debug borders */
-/* .main-container       {border: 4px solid red;}
-section               {border: 5px solid orange;}
-.section-content      {border: 3px solid yellow;}
-.accordion            {border: 3px solid green;}
-.accordion h2         {border: 2px solid turquoise;}
-.content-wrapper      {border: 2px solid lightsalmon;}
-.section p            {border: 2px solid blue;} */
 
 /* ... */
 .main-container {
@@ -692,3 +703,152 @@ section               {border: 5px solid orange;}
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
+
+/* Responsive Design */
+
+/* ========= Anpassungen für Desktops ========= */
+@media (min-width: 1024px) {
+  .mobile-break {
+    display: none;
+  }
+
+  .mobile-none-visible {
+    display: inline;
+  }
+
+  .section-content {
+    display: flex; /* Aktiviert Flexbox für diesen Container */
+    max-width: 768px; /* Setzt die maximale Breite für den Container */
+    margin: 0 auto; /* Zentriert den Container */
+
+  }
+
+  .section-text {
+    flex: 8;
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+  }
+
+  .section-spacer {
+    flex: 3;
+  }
+}
+
+/* ========= Anpassungen für Tablets ========= */
+@media (max-width: 1024px) {
+  .mobile-break {
+    display: none;
+  }
+
+  .mobile-none-visible {
+    display: none;
+  }
+
+  .section-content {
+    display: flex; /* Aktiviert Flexbox für diesen Container */
+    max-width: 768px; /* Setzt die maximale Breite für den Container */
+    margin: 0 auto; /* Zentriert den Container */
+  }
+
+  .section-text {
+    flex: 8;
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+  }
+
+  .section-spacer {
+    flex: 0;
+  }
+}
+
+/* ========= Anpassungen für Mobilgeräte ========= */
+@media (max-width: 768px) {
+  .mobile-break {
+    display: block;
+  }
+
+  .mobile-none-visible {
+    display: none;
+  }
+
+  .section-content {
+    display: flex; /* Aktiviert Flexbox für diesen Container */
+    max-width: 512; /* Setzt die maximale Breite für den Container */
+    margin: 0 auto; /* Zentriert den Container */
+  }
+
+  .section-text {
+    flex: 8;
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+  }
+
+  .section-spacer {
+    flex: 0;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .text-content, .image-content, .image-gallery {
+    width: 100%;
+  }
+
+  .additional-images img {
+    width: 100%; /* Auf kleinen Bildschirmen untereinander */
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    padding: 0.5vh 0.8vw;
+    /* height: var(--topbar-height); */
+    box-shadow: 0 0 5px #333, 0 -10px 15px #333, 0px -15px 25px #333;
+    z-index: 3;
+  }
+
+  /* flex: 1; bedeutet jeder Link nimmt */
+  /* den gleichen Anteil des Raumes ein */
+  .nav a {
+    flex: 1;
+    /* float: right; */
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    margin:  0 0.5vw;
+    text-decoration: none;
+    font-family: 'BBC-L';
+    font-weight: bold;
+    /* font-weight: bold; */
+    /* font-size: 0.8em; */
+    border-radius: var(--button-border-radius);
+  }
+}
+
+/* ========= Anpassungen für sehr kleine Geräte ========= */
+@media (max-width: 480px) {
+}
+
+
+ /* debug borders */
+/* .main-container       {border: 4px solid red;}
+section               {border: 5px solid orange;}
+.section-content      {border: 3px solid yellow;}
+.accordion            {border: 3px solid green;}
+.accordion h2         {border: 2px solid turquoise;}
+.content-wrapper      {border: 2px solid lightsalmon;}
+.section p            {border: 2px solid blue;} */
